@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="Recipe Name"
         android:textAlignment="center"
-        android:textSize="30"
+        android:textSize="30dp"
         android:textStyle="bold"/>
 
     <ImageView
