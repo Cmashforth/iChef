@@ -6,40 +6,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recipe Name"
+        android:text="Salmon Pasta Salad With Lemon and Capers"
         android:textSize="30dp"
         android:textAlignment="center"
         android:textStyle="bold"
         android:id="@+id/repName" />
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Ingredients"
-        android:layout_below="@+id/repName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp"
-        android:id="@+id/ingredients" />
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Prep"
-        android:layout_alignTop="@+id/ingredients"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp" />
-
     <TextView
         android:id="@+id/timer"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:layout_above="@+id/startButton"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_marginBottom="27dp" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="87dp"
+        android:text=""/>
 
     <Button
         android:id="@+id/startButton"
@@ -73,8 +62,5 @@
         android:layout_marginBottom="39dp"
         android:onClick="onClick"
         android:visibility="invisible"/>
-
-
-
 
 </RelativeLayout>

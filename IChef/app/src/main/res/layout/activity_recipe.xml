@@ -7,7 +7,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recipe Name"
+        android:text="Salmon Pasta Salad With Lemon and Capers"
         android:textAlignment="center"
         android:textSize="30dp"
         android:textStyle="bold"/>
@@ -28,23 +28,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
-        android:id="@+id/button"
+        android:id="@+id/ingredients"
         android:layout_marginLeft="15dp"
         android:layout_toLeftOf="@+id/prep"
         android:layout_toStartOf="@+id/prep"
-        android:text="ingredients"/>
+        android:text="ingredients"
+        android:onClick="onClick"/>
 
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
+        android:layout_alignBaseline="@+id/ingredients"
+        android:layout_alignBottom="@+id/ingredients"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="37dp"
         android:layout_marginEnd="37dp"
         android:id="@+id/prep"
-        android:text="Prep"/>
+        android:text="Prep"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/ichef"
@@ -52,15 +54,31 @@
         android:layout_height="wrap_content"
         android:onClick="onClick"
         android:text="Start iChef"
+        android:layout_marginBottom="17dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="29dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
+        android:id="@+id/ingredientsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/prep"
-        android:layout_above="@+id/ichef" />
+        android:layout_above="@+id/ichef"
+        android:text="@string/ingredients"
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/prepList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prep"
+        android:layout_above="@+id/ichef"
+        android:text="@string/prep"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
 
 </RelativeLayout>

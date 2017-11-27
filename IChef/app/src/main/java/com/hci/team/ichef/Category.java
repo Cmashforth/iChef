@@ -8,19 +8,19 @@ import android.widget.Button;
 
 public class Category extends AppCompatActivity {
 
-    private Button drinksButton;
+    private Button saladButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        drinksButton = (Button) findViewById(R.id.drinks);
+        saladButton = (Button) findViewById(R.id.salads);
     }
 
 
     public void onClick(View view){
-        if(view == drinksButton){
+        if(view == saladButton){
             Intent changeToDrinks = new Intent(this,RecipeSelection.class);
             startActivity(changeToDrinks);
         }

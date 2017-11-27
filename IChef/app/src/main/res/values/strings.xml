@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">IChef</string>
+
+    <string name="ingredients">85G wholewheat Penne\n1 tbsp Rapespeed Oil\n1 Large Pepper\n2 frozen,skinless wild salmon fillets (about 120g each)
+    \n1 lemon\n2 garlic Cloves\n1 shallot\n2 tbsp capers\n6 Kalamata Olives\n1 tsp extra virgin olive oil\n2 handfuls of rocket</string>
+
+    <string name="prep">You will need:\n1 frying pan\n1 cooking pan\n1 large bowl\nYou will need to:\nRoughly chop the pepper
+    \nZest and Juice the Lemon\nFinely grate the garlic\nVery finely Chop the shallot\nPit and Slice the olives</string>
+
 </resources>

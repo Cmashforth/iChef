@@ -41,7 +41,8 @@
             android:layout_toRightOf="@+id/breakfast"
             android:layout_toEndOf="@+id/breakfast"
             android:text="salads"
-            android:id="@+id/salads" />
+            android:id="@+id/salads"
+            android:onClick="onClick"/>
 
         <Button
             android:layout_width="150dp"
@@ -62,7 +63,7 @@
             android:layout_alignLeft="@+id/salads"
             android:layout_alignStart="@+id/salads"
             android:text="drinks"
-            android:onClick="onClick"/>
+            />
 
         <Button
             android:layout_width="150dp"
