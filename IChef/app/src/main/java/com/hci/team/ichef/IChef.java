@@ -1,9 +1,17 @@
 package com.hci.team.ichef;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +19,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.Locale;
+
 
 
 
@@ -24,6 +34,7 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
     private Button startButton;
     private Button pauseButton;
     private Button resumeButton;
+    private Button currentView;
     private TextView timerText;
     private TextView instruction;
     private Long recipeTime;
@@ -31,7 +42,6 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
     private CountDownTimer timer;
     private TextToSpeech outputSpeech;
     private Long taskTime;
-
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,27 +52,58 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
         resumeButton = (Button) findViewById(R.id.resumeButton);
         timerText = (TextView) findViewById(R.id.timer);
         instruction = (TextView) findViewById(R.id.instructions);
+        currentView = startButton;
         recipeTime = 1140000L;
         taskTimeRemaining = 0L;
         taskTime = 300000L;
-        outputSpeech = new TextToSpeech(this,this);
+        outputSpeech = new TextToSpeech(this, this);
+
+        SensorManager senseManage = (SensorManager)getSystemService(SENSOR_SERVICE);
+
+        Sensor lightSensor = senseManage.getDefaultSensor(Sensor.TYPE_LIGHT);
+        if(lightSensor != null){
+            senseManage.registerListener(LightSensorListener,lightSensor,senseManage.SENSOR_DELAY_NORMAL);
+        } else{
+
+        }
+
     }
+
+    private final SensorEventListener LightSensorListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            if(event.sensor.getType() == Sensor.TYPE_LIGHT){
+                if(event.values[0] < 5){
+                    onClick(currentView);
+                }
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+        }
+    };
 
 
     public void onClick(View view){
         if(view == startButton){
             view.setVisibility(View.INVISIBLE);
             pauseButton.setVisibility(View.VISIBLE);
+            currentView = pauseButton;
             createTimer(taskTime);
         } else if(view == pauseButton){
+            outputSpeech.speak("Paused",TextToSpeech.QUEUE_FLUSH,null,null);
             view.setVisibility(View.INVISIBLE);
             resumeButton.setVisibility(View.VISIBLE);
+            currentView = resumeButton;
             timer.cancel();
+            recipeTime = recipeTime - (taskTime - taskTimeRemaining);
             taskTime = taskTimeRemaining;
-            recipeTime = recipeTime - taskTime;
         } else if(view == resumeButton){
             view.setVisibility(View.INVISIBLE);
             pauseButton.setVisibility(View.VISIBLE);
+            currentView = pauseButton;
             createTimer(taskTime);
         }
     }
@@ -140,10 +181,5 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
             Toast.makeText(IChef.this, "No Speech Output", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-
-
-
 
 }
