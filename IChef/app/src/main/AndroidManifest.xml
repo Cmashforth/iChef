@@ -20,7 +20,9 @@
         <activity android:name=".Recipe"
             android:label="@string/title_activity_recipe"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".IChef"/>
+
+        <activity android:name=".IChef">
+        </activity>
     </application>
 
 </manifest>
