@@ -1,52 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hci.team.ichef.RecipeSelection"
-    android:weightSum="1">
+    android:orientation="vertical"
+    tools:context="com.hci.team.ichef.RecipeSelection">
 
     <TextView
+        android:id="@+id/saladsTxt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salad"
-        android:textStyle="bold"
-        android:textSize="30dp"
+        android:layout_height="70dp"
+        android:layout_weight="0.25"
+        android:background="@color/primary_light"
+        android:text="@string/salads"
         android:textAlignment="center"
-        android:id="@+id/textView" />
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="@string/salads"/>
 
-    <Button
-        android:id="@+id/selectionOne"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
+    <ImageView
+        android:id="@+id/saladOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="202dp"
+        app:srcCompat="@drawable/saladoption_1"/>
+
+    <ImageButton
+        android:id="@+id/saladOptionBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="218dp"
+        android:scaleType="centerCrop"
         android:onClick="onClick"
-        android:text="Salmon Pasta Salad With Lemon and Capers"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        app:srcCompat="@drawable/saladoption_2"/>
 
-    <Button
-        android:id="@+id/selectionTwo"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:onClick="onClick"
-        android:text="Charred Onion and Tomato Salad"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/selectionOne"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@+id/saladOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/saladoption_3"/>
 
-    <Button
-        android:id="@+id/selectionThree"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:onClick="onClick"
-        android:text="Chicken Satay Salad"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/selectionTwo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-</RelativeLayout>
+</LinearLayout>

@@ -1,111 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hci.team.ichef.Category"
-    android:weightSum="1">
+    android:orientation="vertical"
+    tools:context="com.hci.team.ichef.Category">
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/search_bar"
-        android:hint="Search for a Recipe"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/search_bar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp"
-        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="172dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/soups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/soups"/>
+
+            <ImageView
+                android:id="@+id/sideDishes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/side_dishes"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="156dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/saladsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/salads"/>
+
+            <ImageView
+                android:id="@+id/mainDishes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/main_dishes"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="174dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/desserts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/desserts"/>
+
+            <ImageView
+                android:id="@+id/snacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/snacks"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="289dp">
+
+            <ImageView
+                android:id="@+id/breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/breakfast"/>
+
+            <ImageView
+                android:id="@+id/drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/drinks"/>
+        </LinearLayout>
 
 
-        <Button
-            android:id="@+id/breakfast"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"
-            android:text="breakfast"
-            />
+    </LinearLayout>
 
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/breakfast"
-            android:layout_alignBottom="@+id/breakfast"
-            android:layout_toRightOf="@+id/breakfast"
-            android:layout_toEndOf="@+id/breakfast"
-            android:text="salads"
-            android:id="@+id/salads"
-            android:onClick="onClick"/>
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/breakfast"
-            android:layout_alignLeft="@+id/breakfast"
-            android:layout_alignStart="@+id/breakfast"
-            android:layout_marginTop="35dp"
-            android:text="Soup"
-            android:id="@+id/soup" />
-
-        <Button
-            android:id="@+id/drinks"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/soup"
-            android:layout_alignBottom="@+id/soup"
-            android:layout_alignLeft="@+id/salads"
-            android:layout_alignStart="@+id/salads"
-            android:text="drinks"
-            />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/soup"
-            android:layout_alignStart="@+id/soup"
-            android:text="Main dishes"
-            android:id="@+id/main_dishes"/>
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/main_dishes"
-            android:layout_alignBottom="@+id/main_dishes"
-            android:layout_alignLeft="@+id/drinks"
-            android:layout_alignStart="@+id/drinks"
-            android:text="Sides"
-            android:id="@+id/sides"/>
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Snacks"
-            android:id="@+id/snacks"
-            android:layout_marginTop="48dp"
-            android:layout_below="@+id/main_dishes"
-            android:layout_toLeftOf="@+id/desserts"
-            android:layout_toStartOf="@+id/desserts" />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/snacks"
-            android:layout_alignBottom="@+id/snacks"
-            android:layout_alignLeft="@+id/sides"
-            android:layout_alignStart="@+id/sides"
-            android:text="Desserts"
-            android:id="@+id/desserts"
-            android:layout_alignRight="@+id/sides"
-            android:layout_alignEnd="@+id/sides" />
-
-    </RelativeLayout>
-
-</RelativeLayout>
+</LinearLayout>

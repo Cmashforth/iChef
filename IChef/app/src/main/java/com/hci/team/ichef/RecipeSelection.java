@@ -1,10 +1,10 @@
 package com.hci.team.ichef;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 
 /**
@@ -13,20 +13,20 @@ import android.widget.Button;
 
 public class RecipeSelection extends AppCompatActivity {
 
-    private Button selectionOne;
+    ImageButton mImageButton;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipeselection);
 
-        selectionOne = (Button) findViewById(R.id.selectionOne);
+        mImageButton = (ImageButton) findViewById(R.id.saladOptionBtn2);
     }
 
-
     public void onClick(View view){
-        if(view == selectionOne){
-            Intent changeToRecipe = new Intent(this,Recipe.class);
-            startActivity(changeToRecipe);
+        if(view == mImageButton){
+            Intent intent = new Intent(RecipeSelection.this, Recipe.class);
+            startActivity(intent);
         }
     }
 }

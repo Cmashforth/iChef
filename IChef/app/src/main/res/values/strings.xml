@@ -1,10 +1,36 @@
 <resources>
-    <string name="app_name">IChef</string>
-
-    <string name="ingredients">85G wholewheat Penne\n1 tbsp Rapespeed Oil\n1 Large Pepper\n2 frozen,skinless wild salmon fillets (about 120g each)
-    \n1 lemon\n2 garlic Cloves\n1 shallot\n2 tbsp capers\n6 Kalamata Olives\n1 tsp extra virgin olive oil\n2 handfuls of rocket</string>
-
-    <string name="prep">You will need:\n1 frying pan\n1 cooking pan\n1 large bowl\nYou will need to:\nRoughly chop the pepper
-    \nZest and Juice the Lemon\nFinely grate the garlic\nVery finely Chop the shallot\nPit and Slice the olives</string>
-
+    <string name="app_name">iChef1</string>
+    <string name="breakfast">breakfast</string>
+    <string name="salads">Salads</string>
+    <string name="soups">soups</string>
+    <string name="desserts">desserts</string>
+    <string name="mainDishes">mainDishes</string>
+    <string name="sideDishes">sideDishes</string>
+    <string name="drinks">drinks</string>
+    <string name="snacks">snacks</string>
+    <string name="title_activity_recipe">Recipe</string>
+    <string name="recipe">Salmon pasta salad with lemon and capers</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="startIchef">Start iChef</string>
+    <string name="time">20 MINS</string>
+    <string name="difficulty">EASY</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="prep">Prep</string>
+    <string name="theRecipe">
+        85g wholewheat penne\n
+        1 tbsp rapeseed oil\n
+        1 large red pepper, roughly chopped\n
+        2 frozen, skinless wild salmon fillets (about 120g each)\n
+        1 lemon, zested and juiced\n
+        2 garlic cloves, finely grated\n
+        1 shallot, very finely chopped\n
+        2 tbsp capers\n
+        6 pitted Kalamata olives, sliced\n
+        1 tsp extra virgin olive oil\n
+        2 handfuls rocket</string>
+    <string name="thePrep">
+        1. Cook the pasta following pack instructions. Meanwhile, heat the rapeseed oil in a frying pan, add the pepper, cover and leave for about 5 mins until it softens and starts to char a little. Stir, then push the pepper to one side and add the salmon. Cover and fry for 8-10 mins until just cooked.\n \n
+        2. Meanwhile, mix the lemon zest and juice in a large bowl with the garlic, shallot, capers and olives.\n \n
+        3. Add the cooked pepper and salmon to the bowl. Drain the pasta and add it too, with black pepper and the olive oil. Toss everything together, flaking the salmon as you do so. If eating now, toss through the rocket; if packing a lunch, leave to cool, then put in a container with the rocket on top and mix through just before eating.</string>
 </resources>

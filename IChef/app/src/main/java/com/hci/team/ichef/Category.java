@@ -4,27 +4,27 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Category extends AppCompatActivity {
 
-    private Button saladButton;
+    ImageButton mImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        saladButton = (Button) findViewById(R.id.salads);
+        mImageButton = (ImageButton) findViewById(R.id.saladsBtn);
+
+
     }
 
-
-    public void onClick(View view){
-        if(view == saladButton){
-            Intent changeToDrinks = new Intent(this,RecipeSelection.class);
-            startActivity(changeToDrinks);
+    public void onClick(View view) {
+        if(view == mImageButton){
+            Intent intent = new Intent(Category.this, RecipeSelection.class);
+            startActivity(intent);
         }
+
     }
-
-
 }
