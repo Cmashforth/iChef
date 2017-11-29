@@ -114,7 +114,7 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
         timer = new CountDownTimer(time,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                timerText.setText("Time Remaining: " + (millisUntilFinished/1000)/60 + ":" + (millisUntilFinished/1000)%60);
+                timerText.setText("" + (millisUntilFinished/1000)/60 + ":" + (millisUntilFinished/1000)%60);
                 taskTimeRemaining = millisUntilFinished;
 
 
@@ -145,17 +145,17 @@ public class IChef extends AppCompatActivity implements TextToSpeech.OnInitListe
 
     private void setText(Long time){
         if(time > 840000L){
-            instruction.setText("Cook Pasta and Fry pepper");
-            outputSpeech.speak("Cook Pasta and Fry Pepper",TextToSpeech.QUEUE_FLUSH,null,null);
+            instruction.setText("Add Pasta to a pan of Boiling Water. Heat oil in a frying pan and add the pepper");
+            outputSpeech.speak("Add Pasta to a pan of Boiling Water. Heat oil in a frying pan and add the pepper",TextToSpeech.QUEUE_FLUSH,null,null);
         } else if(time > 240000L && time <= 840000L){
-            instruction.setText("Cook salmon");
-            outputSpeech.speak("Cook Salmon",TextToSpeech.QUEUE_FLUSH,null,null);
+            instruction.setText("Take the pepper out of the frying pan and add the Salmon to it");
+            outputSpeech.speak("Take the pepper out of the frying pan and add the Salmon to it",TextToSpeech.QUEUE_FLUSH,null,null);
         } else if(time > 120000L && time <= 240000L){
-            instruction.setText("Dress");
-            outputSpeech.speak("Dress",TextToSpeech.QUEUE_FLUSH,null,null);
+            instruction.setText("Mix the lemon zest and juice in a bowl with garlic,shallot,capers and olives");
+            outputSpeech.speak("Mix the lemon zest and juice in a bowl with garlic,shallot,capers and olives",TextToSpeech.QUEUE_FLUSH,null,null);
         } else if(time < 120000L){
-            instruction.setText("Add Everything");
-            outputSpeech.speak("Add Everything",TextToSpeech.QUEUE_FLUSH,null,null);
+            instruction.setText("Add the cooked pepper and salmon to the bowl. Drain the pasta and add it to the bowl. Toss with black pepper, olive oil and rocket");
+            outputSpeech.speak("Add the cooked pepper and salmon to the bowl. Drain the pasta and add it to the bowl. Toss with black pepper, olive oil and rocket",TextToSpeech.QUEUE_FLUSH,null,null);
         }
     }
 

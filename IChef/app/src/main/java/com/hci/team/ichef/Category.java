@@ -18,7 +18,6 @@ public class Category extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         mImageButton = (ImageButton) findViewById(R.id.saladsBtn);
-        Toast.makeText(getApplicationContext(),""+ Build.CPU_ABI,Toast.LENGTH_SHORT).show();
 
     }
 
