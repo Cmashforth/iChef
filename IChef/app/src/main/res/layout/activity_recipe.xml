@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
     tools:context="com.hci.team.ichef.Recipe">
 
@@ -36,16 +36,6 @@
             app:srcCompat="@drawable/salmon_pasta"
             android:contentDescription="@string/salads"/>
 
-        <Button
-            android:id="@+id/btnTest"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="#ffff"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/startIchef"
-            android:layout_alignParentBottom="true"
-            android:onClick="onClick"/>
-
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
@@ -57,6 +47,25 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:layout_weight="1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/appbar"
+        android:layout_alignParentStart="true" />
 
-</android.support.design.widget.CoordinatorLayout>
+
+
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/container"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onClick"
+            android:text="@string/startIchef"
+            android:textColor="#ffff" />
+
+
+
+
+</RelativeLayout>

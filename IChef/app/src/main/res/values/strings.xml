@@ -9,12 +9,11 @@
     <string name="drinks">drinks</string>
     <string name="snacks">snacks</string>
     <string name="title_activity_recipe">Recipe</string>
-    <string name="recipe">Salmon pasta salad with lemon and capers</string>
+    <string name="recipe">Salmon Pasta Salad with Lemon and Capers</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="startIchef">Start iChef</string>
-    <string name="time">20 MINS</string>
-    <string name="difficulty">EASY</string>
+    <string name="time">Cooking Time: 15-20 MINS</string>
     <string name="ingredients">Ingredients</string>
     <string name="prep">Prep</string>
     <string name="theRecipe">
@@ -28,7 +27,7 @@
         2 tbsp capers\n
         6 pitted Kalamata olives, sliced\n
         1 tsp extra virgin olive oil\n
-        2 handfuls rocket</string>
+        2 handfuls rocket\n\n</string>
     <string name="thePrep">
         1. Cook the pasta following pack instructions. Meanwhile, heat the rapeseed oil in a frying pan, add the pepper, cover and leave for about 5 mins until it softens and starts to char a little. Stir, then push the pepper to one side and add the salmon. Cover and fry for 8-10 mins until just cooked.\n \n
         2. Meanwhile, mix the lemon zest and juice in a large bowl with the garlic, shallot, capers and olives.\n \n

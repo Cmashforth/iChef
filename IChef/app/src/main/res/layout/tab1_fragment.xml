@@ -14,6 +14,7 @@
         android:id="@+id/multiLineTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="@string/theRecipe"/>
@@ -30,15 +31,11 @@
             android:id="@+id/time"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
             android:text="@string/time"/>
 
-        <TextView
-            android:id="@+id/difficulty"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.16"
-            android:text="@string/difficulty"
-            android:textAlignment="textEnd"/>
+
     </LinearLayout>
 
 </LinearLayout>

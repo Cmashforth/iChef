@@ -6,110 +6,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.hci.team.ichef.Category">
+    tools:context="com.hci.team.ichef.Category"
+    android:weightSum="1"
+    android:background="@color/colorPrimaryDark">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for a Recipe"
+        android:background="#ffff">
+    </EditText>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="176dp"
         android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="172dp"
-            android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/soups"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/soups" />
 
-            <ImageView
-                android:id="@+id/soups"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/soups"/>
+        <ImageView
+            android:id="@+id/sideDishes"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/side_dishes" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/sideDishes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/side_dishes"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="156dp"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/saladsBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:onClick="onClick"
-                app:srcCompat="@drawable/salads"/>
+        <ImageButton
+            android:id="@+id/saladsBtn"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:onClick="onClick"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/salads" />
 
-            <ImageView
-                android:id="@+id/mainDishes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/main_dishes"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="174dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/desserts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/desserts"/>
-
-            <ImageView
-                android:id="@+id/snacks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/snacks"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="289dp">
-
-            <ImageView
-                android:id="@+id/breakfast"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/breakfast"/>
-
-            <ImageView
-                android:id="@+id/drinks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/drinks"/>
-        </LinearLayout>
-
+        <ImageView
+            android:id="@+id/mainDishes"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/main_dishes" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="0.02">
+
+
+        <ImageView
+            android:id="@+id/desserts"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/desserts" />
+
+
+        <ImageView
+            android:id="@+id/snacks"
+            android:layout_width="190dp"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/snacks" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tap a Category"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+
+
 </LinearLayout>
+
+

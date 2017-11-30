@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_weight="0.25"
-        android:background="@color/primary_light"
+        android:background="@color/colorPrimary"
         android:text="@string/salads"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"

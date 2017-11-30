@@ -7,11 +7,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salmon Pasta Salad With Lemon and Capers"
+        android:text="Salmon Pasta Salad with Lemon and Capers"
         android:textSize="30dp"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="#000000"
+        android:background="@color/colorPrimary"
         android:id="@+id/repName" />
 
     <ImageView
@@ -23,9 +24,8 @@
         android:scaleType="center"
         app:srcCompat="@drawable/salmon_pasta"
         android:contentDescription="@string/salads"
-        android:layout_above="@+id/instructions"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp" />
+        android:layout_above="@+id/instructions" />
 
     <TextView
         android:id="@+id/timer"
@@ -44,8 +44,10 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="75dp"
+        android:layout_above="@+id/timer"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -53,38 +55,38 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Start"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
         android:onClick="onClick"
         android:visibility="visible"
         android:background="@color/colorPrimaryDark"
-        android:textColor="#ffff"/>
+        android:textColor="#ffff"
+        android:layout_alignTop="@+id/pauseButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/pauseButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Pause"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
         android:onClick="onClick"
         android:visibility="invisible"
         android:background="@color/colorPrimaryDark"
-        android:textColor="#ffff"/>
+        android:textColor="#ffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/startButton"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/resumeButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Resume"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
         android:onClick="onClick"
         android:visibility="invisible"
         android:background="@color/colorPrimaryDark"
-        android:textColor="#ffff"/>
+        android:textColor="#ffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
